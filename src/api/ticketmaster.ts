@@ -1,6 +1,6 @@
 import { Event, Attraction, Venue } from '../types';
 
-const API_KEY = 'Ox90qokGcqgD08yQVKM9iDpXjic6b8hD';
+const API_KEY = 'Ox90qokGcqgD08yQVKM9iDpXjic6b8hD'; //API KEY
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2';
 
 export async function fetchEventsByCity(city: string, size: number = 10): Promise<Event[]> {
