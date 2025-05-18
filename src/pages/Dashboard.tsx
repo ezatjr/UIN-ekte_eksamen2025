@@ -3,6 +3,11 @@ import { LogOut, User, Calendar, Ticket } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import EventCard from '../components/EventCard';
 
+// KILDER:
+// - React useState: https://react.dev/reference/react/useState
+// - Konteksthåndtering i React: https://react.dev/reference/react/useContext
+// - Skjema og input-håndtering i React: https://www.w3schools.com/react/react_forms.asp
+
 const Dashboard: React.FC = () => {
   const { isLoggedIn, login, logout, wishlist } = useAppContext();
   

@@ -9,6 +9,12 @@ import type { Event, Classification } from "../types"
 import { useAppContext } from "../context/AppContext"
 import ArtistCard from "../components/ArtistCard"
 
+// KILDER:
+// useparams: https://www.geeksforgeeks.org/reactjs-useparams-hook/
+// - useEffect og useState: https://www.w3schools.com/react/react_useeffect.asp
+// - Dato formatering: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+
 interface FestivalPass {
   id: string
   name: string

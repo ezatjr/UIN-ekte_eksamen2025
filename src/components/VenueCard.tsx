@@ -2,17 +2,20 @@ import React from 'react';
 import { MapPin } from 'lucide-react';
 import { Venue } from '../types';
 
+// KILDER:
+// - React komponenter og props: https://reactjs.org/docs/components-and-props.html
 interface VenueCardProps {
   venue: Venue;
 }
 
 const VenueCard: React.FC<VenueCardProps> = ({ venue }) => {
   // Get the main image or use a placeholder
+    // Bruker første bilde i arrayet hvis tilgjengelig
   const imageUrl = venue.images && venue.images.length > 0
     ? venue.images[0].url
     : 'https://via.placeholder.com/400x200?text=No+Image+Available';
 
-  // Format location
+  // Formater sted
   const location = 
     `${venue.city?.name || ''}, ${venue.country?.name || 'Location not available'}`;
 

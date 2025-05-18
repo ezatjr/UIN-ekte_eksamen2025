@@ -7,6 +7,13 @@ import EventCard from '../components/EventCard';
 import ArtistCard from '../components/ArtistCard';
 import VenueCard from '../components/VenueCard';
 
+// KILDER:
+// - useState og useEffect: https://reactjs.org/docs/hooks-overview.html
+// - useParams (React Router): https://reactrouter.com/en/main/hooks/use-params
+// - Fetching data i React: https://www.freecodecamp.org/news/how-to-fetch-api-data-in-react/
+// - Ticketmaster Discovery API: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+// - Optional chaining: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
 const CategoryPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [attractions, setAttractions] = useState<Attraction[]>([]);
@@ -15,16 +22,16 @@ const CategoryPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
-  // Filter states
+  // // Filtrer stater
   const [searchTerm, setSearchTerm] = useState('');
   const [dateFilter, setDateFilter] = useState('');
   const [countryFilter, setCountryFilter] = useState('');
   const [cityFilter, setCityFilter] = useState('');
   
-  // Format the category title
+  // Formater kategorie overskrift
   const categoryTitle = slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : '';
   
-  // Fetch category content when params change
+  //  Hent kategoriinnhold når parametere endres
   useEffect(() => {
     const fetchContent = async () => {
       if (!slug) return;
