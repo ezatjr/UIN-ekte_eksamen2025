@@ -129,18 +129,13 @@ export async function fetchSuggest(keyword: string): Promise<{
     return { attractions: [], events: [], venues: [] };
   }
 }
-
 export async function fetchSpecificFestivals(): Promise<Event[]> {
   try {
     const festivalNames = [
-      'Øyafestivalen',
-      'Tons of Rock',
-      'Findings Festival',
-      'Palmesus',
-      'Norwegian Wood',
-      'Over Oslo',
-      'Piknik i Parken',
-      'Stavernfestivalen'
+      'Findings',
+      'Neon',
+      'Skeikampenfestivalen',
+      'Tons of Rock'
     ];
     
     const festivalPromises = festivalNames.map(async (name) => {
