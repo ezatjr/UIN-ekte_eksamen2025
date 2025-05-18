@@ -34,7 +34,6 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist }) => {
         </div>
         {artist.url && (
           <a 
-            href={artist.url} 
             className="btn btn-outline"
             target="_blank"
             rel="noopener noreferrer"

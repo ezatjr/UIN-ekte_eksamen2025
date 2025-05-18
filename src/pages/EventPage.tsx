@@ -381,7 +381,6 @@ const EventPage: React.FC = () => {
             <h2 className="event-info-title">Billetter</h2>
             {event.url ? (
               <a
-                href={event.url}
                 className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -419,7 +418,6 @@ const EventPage: React.FC = () => {
 
               {venue.url && (
                 <a
-                  href={venue.url}
                   className="btn btn-outline"
                   target="_blank"
                   rel="noopener noreferrer"
