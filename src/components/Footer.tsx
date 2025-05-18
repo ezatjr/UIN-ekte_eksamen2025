@@ -58,7 +58,18 @@ const Footer: React.FC = () => {
             <li>
               <a href="#" className="footer-link">Personvern</a>
             </li>
+            <li>
+              <a 
+                href="https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="footer-link"
+              >
+                Ticketmaster Discovery API
+              </a>
+            </li>
           </ul>
+
         </div>
       </div>
 
