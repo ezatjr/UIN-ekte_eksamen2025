@@ -7,20 +7,21 @@ export async function fetchEventsByCity(city: string, size: number = 10): Promis
   try {
     const encodedCity = encodeURIComponent(city);
     const response = await fetch(
-      `${BASE_URL}/events.json?apikey=${API_KEY}&city=${encodedCity}&size=${size}&locale=no`
+      `${BASE_URL}/events.json?apikey=${API_KEY}&city=${encodedCity}&size=${size}`
     );
     
     if (!response.ok) {
-      throw new Error('Nettverksfeil ved henting av hendelser');
+      throw new Error('Network response was not ok');
     }
     
     const data = await response.json();
     return data._embedded?.events || [];
   } catch (error) {
-    console.error('Feil ved henting av hendelser etter by:', error);
+    console.error('Error fetching events by city:', error);
     return [];
   }
 }
+
 
 export async function fetchEventById(id: string): Promise<Event | null> {
   try {
